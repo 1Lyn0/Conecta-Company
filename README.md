@@ -20,7 +20,7 @@ O Contact Flow foi desenhado para maximizar a retenção no autoatendimento. A a
 ### Fluxo de Decisão (Contact Flow)
 O roteamento valida parâmetros dinâmicos e transfere o contato para as filas correspondentes. 
 
-![Diagrama do Contact Flow](./docs/ContactFlowMenu.jpg)
+![Diagrama do Contact Flow](./docs/ContactFlowMenu.png)
 
 ### Tratamento de Submenus (NLP)
 O bot Lex foi configurado para interpretar linguagem natural e jargões corporativos e acadêmicos. Por exemplo, no submenu de Matrículas, o sistema reconhece sinônimos como "grade curricular", "o que vou aprender" e "carga horária" para acionar os fluxos de forma fluida, mitigando falhas por dependência exclusiva de inputs numéricos.
