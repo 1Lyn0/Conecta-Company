@@ -1,0 +1,160 @@
+﻿<svg width="700" height="520" viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#f1f5f9"/>
+    </linearGradient>
+    <marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00a86b"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1a73e8"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000015"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="520" fill="url(#bg)" rx="12"/>
+  <rect width="700" height="520" fill="none" stroke="#e2e8f0" stroke-width="1" rx="12"/>
+
+  <!-- Title -->
+  <text x="350" y="34" font-family="'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1e293b" text-anchor="middle">Contact Flow — Conecta Support Flow</text>
+  <line x1="100" y1="44" x2="600" y2="44" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- ── BLOCK: Entry Point ── -->
+  <g transform="translate(275, 60)" filter="url(#shadow)">
+    <ellipse cx="75" cy="20" rx="75" ry="20" fill="#1e293b"/>
+    <text x="75" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="white" text-anchor="middle">Entry Point</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="350" y1="100" x2="350" y2="120" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ── BLOCK: Play Prompt (boas-vindas) ── -->
+  <g transform="translate(230, 122)" filter="url(#shadow)">
+    <rect x="0" y="0" width="240" height="52" rx="8" fill="white" stroke="#1a73e8" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="52" rx="4" fill="#1a73e8"/>
+    <text x="130" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#1a73e8" text-anchor="middle">▶ Play Prompt</text>
+    <text x="130" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">"Olá! Bem-vindo à Conecta Company."</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="350" y1="174" x2="350" y2="194" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ── BLOCK: Get Customer Input ── -->
+  <g transform="translate(200, 196)" filter="url(#shadow)">
+    <rect x="0" y="0" width="300" height="64" rx="8" fill="white" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="0" y="0" width="8" height="64" rx="4" fill="#7c3aed"/>
+    <text x="154" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#7c3aed" text-anchor="middle">◆ Get Customer Input</text>
+    <text x="154" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">"Para Vendas, pressione 1.</text>
+    <text x="154" y="52" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">Para Suporte, pressione 2."</text>
+  </g>
+
+  <!-- Branch labels -->
+  <text x="175" y="285" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#00a86b" text-anchor="middle">Opção 1</text>
+  <text x="350" y="285" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#1a73e8" text-anchor="middle">Opção 2</text>
+  <text x="530" y="285" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#ef4444" text-anchor="middle">Default</text>
+
+  <!-- Arrow left (Opção 1) -->
+  <path d="M 270 260 L 175 260 L 175 295" stroke="#00a86b" stroke-width="1.5" fill="none" marker-end="url(#arrowGreen)"/>
+  <!-- Arrow center (Opção 2) -->
+  <line x1="350" y1="260" x2="350" y2="295" stroke="#1a73e8" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <!-- Arrow right (Default) -->
+  <path d="M 430 260 L 530 260 L 530 295" stroke="#ef4444" stroke-width="1.5" fill="none" marker-end="url(#arrowRed)"/>
+
+  <!-- ── BLOCK: Play Prompt Vendas ── -->
+  <g transform="translate(90, 297)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="52" rx="8" fill="white" stroke="#00a86b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="52" rx="4" fill="#00a86b"/>
+    <text x="89" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#00a86b" text-anchor="middle">▶ Play Prompt</text>
+    <text x="89" y="34" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">"Você selecionou Vendas.</text>
+    <text x="89" y="46" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">Aguarde um momento."</text>
+  </g>
+
+  <!-- ── BLOCK: Play Prompt Suporte ── -->
+  <g transform="translate(265, 297)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="52" rx="8" fill="white" stroke="#1a73e8" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="52" rx="4" fill="#1a73e8"/>
+    <text x="89" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#1a73e8" text-anchor="middle">▶ Play Prompt</text>
+    <text x="89" y="34" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">"Você selecionou Suporte.</text>
+    <text x="89" y="46" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">Aguarde um momento."</text>
+  </g>
+
+  <!-- ── BLOCK: Play Prompt Default ── -->
+  <g transform="translate(445, 297)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="52" rx="8" fill="white" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="52" rx="4" fill="#ef4444"/>
+    <text x="89" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#ef4444" text-anchor="middle">▶ Play Prompt</text>
+    <text x="89" y="34" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">"Opção inválida.</text>
+    <text x="89" y="46" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">Encerrando."</text>
+  </g>
+
+  <!-- Arrows down from play prompts -->
+  <line x1="175" y1="349" x2="175" y2="369" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <line x1="350" y1="349" x2="350" y2="369" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <line x1="530" y1="349" x2="530" y2="369" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ── BLOCK: Set Working Queue (x2) ── -->
+  <g transform="translate(90, 371)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="40" rx="8" fill="white" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="40" rx="4" fill="#f59e0b"/>
+    <text x="89" y="18" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#f59e0b" text-anchor="middle">⚙ Set Working Queue</text>
+    <text x="89" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">BasicQueue</text>
+  </g>
+
+  <g transform="translate(265, 371)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="40" rx="8" fill="white" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="40" rx="4" fill="#f59e0b"/>
+    <text x="89" y="18" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#f59e0b" text-anchor="middle">⚙ Set Working Queue</text>
+    <text x="89" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">BasicQueue</text>
+  </g>
+
+  <!-- ── BLOCK: Disconnect ── -->
+  <g transform="translate(445, 371)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="40" rx="8" fill="white" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="40" rx="4" fill="#ef4444"/>
+    <text x="89" y="18" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#ef4444" text-anchor="middle">✕ Disconnect</text>
+    <text x="89" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">Encerra o contato</text>
+  </g>
+
+  <!-- Arrows down from queues -->
+  <line x1="175" y1="411" x2="175" y2="431" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <line x1="350" y1="411" x2="350" y2="431" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- ── BLOCK: Transfer to Queue (x2) ── -->
+  <g transform="translate(90, 433)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="40" rx="8" fill="#f0fdf4" stroke="#00a86b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="40" rx="4" fill="#00a86b"/>
+    <text x="89" y="18" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#00a86b" text-anchor="middle">→ Transfer to Queue</text>
+    <text x="89" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">Agente recebe o chat</text>
+  </g>
+
+  <g transform="translate(265, 433)" filter="url(#shadow)">
+    <rect x="0" y="0" width="170" height="40" rx="8" fill="#f0fdf4" stroke="#00a86b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="8" height="40" rx="4" fill="#00a86b"/>
+    <text x="89" y="18" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="700" fill="#00a86b" text-anchor="middle">→ Transfer to Queue</text>
+    <text x="89" y="32" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#475569" text-anchor="middle">Agente recebe o chat</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 490)">
+    <rect x="0" y="-8" width="10" height="10" rx="2" fill="#1a73e8"/>
+    <text x="14" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#64748b">Play Prompt</text>
+    <rect x="90" y="-8" width="10" height="10" rx="2" fill="#7c3aed"/>
+    <text x="104" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#64748b">Get Customer Input</text>
+    <rect x="230" y="-8" width="10" height="10" rx="2" fill="#f59e0b"/>
+    <text x="244" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#64748b">Set Working Queue</text>
+    <rect x="370" y="-8" width="10" height="10" rx="2" fill="#00a86b"/>
+    <text x="384" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#64748b">Transfer to Queue</text>
+    <rect x="500" y="-8" width="10" height="10" rx="2" fill="#ef4444"/>
+    <text x="514" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="9" fill="#64748b">Disconnect</text>
+  </g>
+</svg>

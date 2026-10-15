@@ -1,0 +1,139 @@
+﻿/* =============================================
+   Conecta Company — Estilos do Site
+   ============================================= */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =============================================
+   Header
+   ============================================= */
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* =============================================
+   Main
+   ============================================= */
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #1a73e8;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    width: 240px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #1a73e8;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* =============================================
+   Footer
+   ============================================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #999;
+    font-size: 0.85rem;
+    border-top: 1px solid #e0e0e0;
+    background: white;
+}
+
+/* =============================================
+   Responsividade
+   ============================================= */
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+}

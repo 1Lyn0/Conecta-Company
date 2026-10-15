@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Company — Suporte ao Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cabeçalho da empresa -->
+    <header>
+        <h1>🏢 Conecta Company</h1>
+        <p>Soluções que fazem a diferença</p>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="hero">
+            <h2>Como podemos ajudar?</h2>
+            <p>
+                Nossa equipe está disponível para atender você via chat.<br>
+                Clique no botão no canto inferior direito para iniciar uma conversa.
+            </p>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h3>💼 Vendas</h3>
+                <p>Conheça nossos produtos e planos</p>
+            </div>
+            <div class="card">
+                <h3>🔧 Suporte Técnico</h3>
+                <p>Resolva problemas com nossa ajuda</p>
+            </div>
+            <div class="card">
+                <h3>💬 Chat ao Vivo</h3>
+                <p>Fale com um agente agora mesmo</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Conecta Company. Todos os direitos reservados.</p>
+    </footer>
+
+	<script type="text/javascript">
+	  (function(w, d, x, id){
+		s=d.createElement('script');
+		s.src='https://conecta-company-joao-coelho.my.connect.aws/connectwidget/static/amazon-connect-chat-interface-client.js';
+		s.async=1;
+		s.id=id;
+		d.getElementsByTagName('head')[0].appendChild(s);
+		w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+	  })(window, document, 'amazon_connect', '97bfa4d6-ca8a-40d0-8fdf-f475722743fd');
+	  amazon_connect('styles', { iconType: 'CHAT', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+	  amazon_connect('snippetId', 'QVFJREFIZ1NqZWV5MTExbXUwZXRHZUlvQ2NPT3RQZ1k4bTl0VDhTaTZYcy9YcFVCVHdHTklhcTcvMWNOVkYvWDI1bmhNbTFIQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNeng0NWF0aXh5bmUwOVI2RkFnRVFnQ3Y4ODdrVzI3cDQrVjBtbDl2RFlPakJiSmFES2hNaUNwMFZRZHJWSElNZ2hFNnZhaHR2R1gwYjlLRUs6Ok02UHJERDh1TTB4dVdJVHZjd1ZUSk92MitkVFY2dDF6cktJZmNjWGx6bmhTQkdFd0R1ZXgxViszOVJTUllKRUVwK05HVE9CanFVUTN3QWpCZ0VtQzY3Ulc2Nkc4SHVBVjE2Y0twOWZqTGJqTU9neDByR21tdlhpU3M5ZnBkUE9mT3JtbWV6RVFYd3hpWXlaSVpSMmgxZWVwYk9lT0MxUT0=');
+	  amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
+	</script>
+
+</body>
+</html>
