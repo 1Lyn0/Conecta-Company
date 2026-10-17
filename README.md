@@ -18,9 +18,9 @@ O Contact Flow foi desenhado para maximizar a retenção no autoatendimento. A a
 ![Arquitetura do Projeto](./docs/arquitetura.svg)
 
 ### Fluxo de Decisão (Contact Flow)
-O roteamento valida parâmetros dinâmicos e transfere o contato para as filas correspondentes. 
+O roteamento valida parâmetros dinâmicos e transfere o contato para as filas correspondentes, implementando também controle de repetições e *timeout*.
 
-![Diagrama do Contact Flow](./docs/ContactFlowMenu.png)
+![Diagrama do Contact Flow](./docs/ContactFlowMenu.jpg)
 
 ### Tratamento de Submenus (NLP)
 O bot Lex foi configurado para interpretar linguagem natural e jargões corporativos e acadêmicos. Por exemplo, no submenu de Matrículas, o sistema reconhece sinônimos como "grade curricular", "o que vou aprender" e "carga horária" para acionar os fluxos de forma fluida, mitigando falhas por dependência exclusiva de inputs numéricos.
@@ -29,20 +29,16 @@ O bot Lex foi configurado para interpretar linguagem natural e jargões corporat
 
 ## 📊 Métricas e Evidências de Funcionamento
 
-O diretório `/evidencias` contém os artefatos visuais que comprovam a operação fim a fim da arquitetura. A bateria de testes comprovou a robustez do bot Lex e a transferência de contexto para o painel CCP.
+O diretório `/evidencias` contém os artefatos visuais que comprovam a operação fim a fim da arquitetura e a proficiência na gestão da plataforma AWS.
 
-1.  **Testes de Roteamento e Interação (`/evidencias/vídeos/Customer - Test chat.mp4`)**:
-    *   **Fluxo de Matrículas e Cursos:** Demonstração da navegação bem-sucedida pelo menu principal e submenus. O bot processa inputs numéricos e palavras-chave (como "conclusão"), encaminhando o cliente para a fila correta. O agente ("Admin") aceita o chat no Contact Control Panel e o atende com base no histórico da conversa previamente carregado na tela.
-    *   **Tratamento de Exceções (Timeout e Fallback):** Capacidade de tratar opções inválidas. Após entradas não reconhecidas, o sistema retorna uma mensagem de erro ("Opção inválida, repetição n") e, ao exceder o limite, informa a falha ("Não entendi sua solicitação") e redireciona o usuário novamente para as opções principais.
-    *   **Atendimento Direto (Suporte Técnico):** A simulação da opção "3" atesta que o roteamento direto para uma fila contorna os submenus, com o agente aceitando prontamente a chamada.
+1.  **Vídeos de Demonstração (Walkthrough Técnico)**:
+    *   **`demo.mp4`**: Apresentação técnica e guiada detalhando a configuração interna do console da AWS. O vídeo explora o provisionamento do **Amazon Lex V2** (Intents e Slots), a lógica visual de roteamento no **Contact Flow**, a simulação integrada de chat (Frontend para o CCP) e a exploração ao vivo dos painéis de métricas e rastreabilidade (Contact Search).
+    *   **`Customer - Test chat.mp4`**: Documentação da navegação pelo menu principal e submenus do ponto de vista do usuário final, comprovando o tratamento de exceções e a transferência de contexto (transcript) para o agente humano.
 
-2.  **Contact Search & Inspeção de Contatos**: 
-    *   Múltiplos contatos foram registrados e concluídos com sucesso (Contact Status: *Completed*).
-    *   A inspeção detalhada de contatos individuais (`DetalhesContato.png`) atesta o registro correto do canal (Chat), fila de destino (ex: `BasicQueue`) e motivo de desconexão (*Customer disconnect*).
-    
-3.  **Historical Metrics (Relatórios de Desempenho)**:
-    *   **Análise de Filas (`Queue.png`)**: O *Service Level* atingiu **95.00%** para atendimentos em até 60 e 120 segundos na fila principal (`BasicQueue`). O Tempo Médio de Interação do Agente (*Average agent interaction time*) foi de aproximadamente **29m37s**, refletindo o volume de testes no CCP.
-    *   **Análise de Agentes (`Agents.png`)**: O relatório de performance atesta a operação e disponibilidade. A conta `agente01` operou com **100% de Answer Rate** e Occupancy total, validando a eficácia do roteamento.
+2.  **Rastreabilidade e Métricas (Historical Metrics)**: 
+    *   Múltiplos contatos foram registrados com sucesso (Contact Status: *Completed*).
+    *   A inspeção detalhada (`DetalhesContato.png`) atesta o registro correto do canal (Chat) e fila de destino (`BasicQueue`).
+    *   A fila principal operou com um *Service Level* de **95.00%** para SLA de 60 segundos (`Queue.png`), refletindo o tráfego gerado nos testes e a disponibilidade operacional da conta `agente01` (`Agents.png`).
 
 ## 📁 Estrutura do Repositório
 
@@ -71,3 +67,12 @@ O diretório `/evidencias` contém os artefatos visuais que comprovam a operaç�
 │   ├── ContactFlowMenu.jpg 
 │   └── BotAlexIntents.png 
 └── README.md
+```
+
+## ⚙️ Execução Local do Frontend
+
+Para rodar a interface web de cliente em ambiente local:
+1. Clone o repositório: `git clone [https://github.com/1Lyn0/Conecta-Company.git](https://github.com/1Lyn0/Conecta-Company.git)`
+2. Acesse a pasta do projeto: `cd Conecta-Company/frontend`
+3. Abra o arquivo `index.html` em um navegador web atualizado. 
+*Nota: O script de injeção do chat requer que a instância do Amazon Connect esteja ativa.*
