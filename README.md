@@ -1,4 +1,4 @@
-# Atendimento via Chat com Amazon Connect e Lex V2
+# Conecta Company - Atendimento via Chat com Amazon Connect e Lex V2
 
 Este projeto implementa uma solução serverless de contact center em nuvem utilizando **Amazon Connect** e **Amazon Lex V2**. O sistema permite que clientes iniciem interações via chat em um site estático, naveguem por um menu de autoatendimento baseado em Processamento de Linguagem Natural (NLP) e sejam roteados para agentes humanos em filas específicas.
 
