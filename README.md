@@ -20,7 +20,7 @@ O Contact Flow foi desenhado para maximizar a retenção no autoatendimento. A a
 ### Fluxo de Decisão (Contact Flow)
 O roteamento valida parâmetros dinâmicos e transfere o contato para as filas correspondentes, implementando também controle de repetições e *timeout*.
 
-![Diagrama do Contact Flow](./docs/ContactFlowMenu.jpg)
+![Diagrama do Contact Flow](./docs/ContactFlowMenu.png)
 
 ### Tratamento de Submenus (NLP)
 O bot Lex foi configurado para interpretar linguagem natural e jargões corporativos e acadêmicos. Por exemplo, no submenu de Matrículas, o sistema reconhece sinônimos como "grade curricular", "o que vou aprender" e "carga horária" para acionar os fluxos de forma fluida, mitigando falhas por dependência exclusiva de inputs numéricos.
@@ -68,11 +68,3 @@ O diretório `/evidencias` contém os artefatos visuais que comprovam a operaç�
 │   └── BotAlexIntents.png 
 └── README.md
 ```
-
-## ⚙️ Execução Local do Frontend
-
-Para rodar a interface web de cliente em ambiente local:
-1. Clone o repositório: `git clone [https://github.com/1Lyn0/Conecta-Company.git](https://github.com/1Lyn0/Conecta-Company.git)`
-2. Acesse a pasta do projeto: `cd Conecta-Company/frontend`
-3. Abra o arquivo `index.html` em um navegador web atualizado. 
-*Nota: O script de injeção do chat requer que a instância do Amazon Connect esteja ativa.*
