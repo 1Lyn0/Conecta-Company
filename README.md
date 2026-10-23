@@ -64,7 +64,7 @@ O diretório `/evidencias` contém os artefatos visuais que comprovam a operaç�
 │   ├── arquitetura.svg 
 │   ├── fluxo-negocio-modulo2.png 
 │   ├── contact-flow.svg 
-│   ├── ContactFlowMenu.jpg 
+│   ├── ContactFlowMenu.png 
 │   └── BotAlexIntents.png 
 └── README.md
 ```
